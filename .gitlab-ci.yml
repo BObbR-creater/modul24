@@ -1,0 +1,18 @@
+image: maven:3.9-eclipse-temurin-17
+
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  script:
+    - echo "Сборка проекта"
+    - mvn compile
+
+test:
+  stage: test
+  script:
+    - echo "Тест проекта"
+    - mvn test
+
